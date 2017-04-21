@@ -174,7 +174,23 @@
 	$$ A^{-1} = \{a | a \ne 0, -1 \le a \le 1\} \implies \sup A^{-1} = 1, \inf A^{-1} = -1$$
 \end{proof}
 
+\begin{problem}{7}
+	$A \subseteq \mathbb{R}, \sup A \in \mathbb{R}$. $B = \{-a | a \in A\}$. Prove: $\inf B = -\sup A$.
+\end{problem}
 
+\begin{proof}{7}
+	Assume $\inf B \ne -\sup A$. There are 2 cases: $\inf B > -\sup A$ or $\inf B < -\sup A$.
+	Case 1:
+	$$\inf B > -\sup A$$
+	Let $\epsilon = \frac{\inf B + \sup A}{2} > 0$
+	$$\exists b \in B: \inf B \ge b > \inf B - \epsilon$$
+	By the definition of B,
+	$$-b \in A \implies -b < \sup A$$
+	$$ -\sup A + \epsilon < -b < -\sup A$$
+	$$ -\sup A + \epsilon < -\sup A$$
+	$$ \epsilon < 0$$
+	We have reached a contradiction, therefore this case is impossible. In a similar way we can prove that the second case is impossible, and therefore we have a contradiction and our assumption is wrong. $\inf B = -\sup A$.
+\end{proof}
 
 \end{problem}
 
