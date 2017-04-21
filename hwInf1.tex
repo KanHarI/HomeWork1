@@ -22,11 +22,11 @@
 \maketitle
  
 \begin{problem}{1}
-Proove: $\sqrt{3} \notin \mathbb{Q}$
+Prove: $\sqrt{3} \notin \mathbb{Q}$
 \end{problem}
 
 \begin{proof}{1}
-We will proove: $\forall n \in \mathbb{N}: n \nmid 3 \implies n^2 \nmid 3$
+We will prove: $\forall n \in \mathbb{N}: n \nmid 3 \implies n^2 \nmid 3$
 \begin{proof}{1.1} \label{p1_1}
 $$n \nmid 3 \implies n\bmod{3} \in \{1,2\}$$
 Option A: $$n \bmod{3} = 1 \newline$$
@@ -45,7 +45,7 @@ $$n^2\bmod{3} = 0+0+1 = 1$$
 
 Therefore $n^2 \bmod{3} \ne 0 \implies  n^2 \nmid 3$.
 \end{proof}
-Assume: $$\sqrt{3} \in \mathbb{Q}$$
+Assume: $\sqrt{3} \in \mathbb{Q}$
 $$\exists{n,m}\in \mathbb{N}: \frac{n}{m} = \sqrt{3} \land \gcd(n,m)=1$$
 $$\frac{n^2}{m^2}=3$$
 $$n^2 = 3m^2$$
@@ -59,6 +59,17 @@ $$m^2 = 3k^2$$
 $$m^2 \mid 3 \implies m \mid 3$$
 $$m \mid 3 \land n \mid 3 \implies \gcd(m,n) \ne 1$$
 We have reached a contradiction. Therefore our assumption is false and $\sqrt{3} \notin \mathbb{Q}$.
+\end{proof}
+
+\begin{problem}{2}
+Prove or falsify: $(x \ge 0 \in \mathbb{R}, \forall \epsilon > 0 \in \mathbb{R}: x<\epsilon) \implies x = 0$ \linebreak
+\end{problem}
+
+\begin{proof}{2}
+Assume $ x \ne 0 \implies x > 0$
+$$x \in R \implies \frac{x}{2} \in R$$
+$$x > 0 \implies x > \frac{x}{2}$$
+We have reached a contradiction, therefore, our assumption is wrong and $x=0$.
 \end{proof}
 
 \end{document}
