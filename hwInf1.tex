@@ -62,7 +62,7 @@
 \end{proof}
 
 \begin{problem}{2}
-	Prove or falsify: $(x \ge 0 \in \mathbb{R}, \forall \epsilon > 0 \in \mathbb{R}: x<\epsilon) \implies x = 0$ \linebreak
+	Prove or falsify: $(x \ge 0 \in \mathbb{R}, \forall \epsilon > 0 \in \mathbb{R}: x<\epsilon) \implies x = 0$
 \end{problem}
 
 \begin{proof}{2}
@@ -142,6 +142,39 @@
 \begin{proof}{5.c}
 	If and only if $\sup A \in A$ and $\inf B \in B$, Which means $$\sup A = \max A \land \inf B = \min B$$ $$A \cap B = \{\max A = \min B\}$$
 \end{proof}
+
+\end{problem}
+
+\begin{problem}{6}
+	$A \subseteq \mathbb{R}, 0 \notin A$
+
+\begin{problem}{6.a}
+	Prove or contradict: $\exists \sup A \implies \exists \sup A^{-1}$
+\end{problem}
+
+\begin{problem}{6.b}
+	Prove or contradict: $\exists \sup A \implies \exists \inf A^{-1}$
+\end{problem}
+
+\begin{proof}{6.a+b}
+	In the case of $$A = \{a | a \ne 0, -1 \le a \le 1\} \implies \sup A = 1 $$
+	$$ A^{-1} = (-\infty, -1] \cup [1,\infty) \implies \lnot \exists \sup A^{-1}, \lnot \exists \inf A^{-1}$$
+\end{proof}
+
+\begin{problem}{6.c}
+	Prove or contradict: $\exists \sup A^{-1} \implies \exists \sup A$
+\end{problem}
+
+\begin{problem}{6.d}
+	Prove or contradict: $\exists \sup A^{-1} \implies \exists \inf A$
+\end{problem}
+
+\begin{proof}{6.c+d}
+	In the case of $$A = (-\infty, -1] \cup [1,\infty) \implies \lnot \exists \sup A, \lnot \exists \inf A$$
+	$$ A^{-1} = \{a | a \ne 0, -1 \le a \le 1\} \implies \sup A^{-1} = 1, \inf A^{-1} = -1$$
+\end{proof}
+
+
 
 \end{problem}
 
