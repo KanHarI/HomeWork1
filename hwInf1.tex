@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{Infi1 Homework}
+\author{KanHar}
+\maketitle
+ 
+\begin{problem}{1}
+Proove: $\sqrt{3} \notin \mathbb{Q}$
+\end{problem}
+
+\begin{proof}{1}
+We will proove: $\forall n \in \mathbb{N}: n \nmid 3 \implies n^2 \nmid 3$
+\begin{proof}{1.1} \label{p1_1}
+$$n \nmid 3 \implies n\bmod{3} \in \{1,2\}$$
+Option A: $$n \bmod{3} = 1 \newline$$
+$$n = (3m+1)$$
+$$n^2 = 9m^2 + 6m + 1$$
+$$9m^2\bmod3=0$$
+$$6m\bmod3=0$$
+$$n^2\bmod{3} = 0+0+1 = 1$$
+Option B: $$n \bmod{3} = 2 \newline$$
+$$n = (3m+2)$$
+$$n^2 = 9m^2 + 12m + 4$$
+$$9m^2\bmod3=0$$
+$$12m\bmod3=0$$
+$$4\bmod3=1$$
+$$n^2\bmod{3} = 0+0+1 = 1$$
+
+Therefore $n^2 \bmod{3} \ne 0 \implies  n^2 \nmid 3$.
+\end{proof}
+Assume: $$\sqrt{3} \in \mathbb{Q}$$
+$$\exists{n,m}\in \mathbb{N}: \frac{n}{m} = \sqrt{3} \land \gcd(n,m)=1$$
+$$\frac{n^2}{m^2}=3$$
+$$n^2 = 3m^2$$
+By proof 1.1:
+$$n^2 \mid 3 \implies n \mid 3$$
+$$\exists k \in \mathbb{N}:n = 3k$$
+$$n^2 = 9k^2$$
+$$\frac{9k^2}{m^2}=3$$
+$$9k^2 = 3m^2$$
+$$m^2 = 3k^2$$
+$$m^2 \mid 3 \implies m \mid 3$$
+$$m \mid 3 \land n \mid 3 \implies \gcd(m,n) \ne 1$$
+We have reached a contradiction. Therefore our assumption is false and $\sqrt{3} \notin \mathbb{Q}$.
+\end{proof}
+
+\end{document}
+              
