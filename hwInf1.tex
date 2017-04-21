@@ -108,5 +108,42 @@
 	Therefore, $$\max B = 5, \min B = -\frac{7}{2}$$
 \end{proof}
 
+\begin{problem}{5}
+	$A, B \subseteq \mathbb{R}$ and $A,B \ne \emptyset$. $\forall a \in A : \forall b \in B: a \le b$.
+
+\begin{problem}{5.a}
+	Prove: $\sup A \le \inf B$
+\end{problem}
+
+\begin{proof}{5.a}
+	Lets assume: $\sup A > \inf B$.
+	Lets define: $$\epsilon = \frac{\sup A - \inf B}{2} > 0$$
+	By the definition of suprimum and infimum $$\exists a \in A: \sup A - \epsilon < a \le \sup A, \exists b \in B: \inf B + \epsilon > b \ge \inf B$$
+	$$a > \sup A - \epsilon = \sup A - \frac{\sup A - \inf B}{2} = \frac{\inf A + \inf B}{2} = \inf B + \frac{\sup A - \inf B}{2} = \inf B + \epsilon > b$$
+	We derived $a > b$, and this is a contradiction with the given information. Therefore our assumption is false and $\sup A \le \inf B$.
+\end{proof}
+
+\begin{problem}{5.b}
+	Prove or falsify: $\sup A = \inf B \implies A \cap B \ne \emptyset$.
+\end{problem}
+
+\begin{proof}{5.b}
+	In the case of 
+	$$A = (-\infty, 1), B = (1, \infty)$$
+	$$\sup A = \inf B = 1$$
+	$$A \cap B = \emptyset$$
+	And we have reached a contradiction. Therefore $\sup A = \inf B \not\implies A \cap B \ne \emptyset$
+\end{proof}
+
+\begin{problem}{5.c}
+	When is $A \cap B \ne \emptyset$
+\end{problem}
+
+\begin{proof}{5.c}
+	If and only if $\sup A \in A$ and $\inf B \in B$, Which means $$\sup A = \max A \land \inf B = \min B$$ $$A \cap B = \{\max A = \min B\}$$
+\end{proof}
+
+\end{problem}
+
 \end{document}
               
