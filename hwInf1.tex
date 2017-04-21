@@ -19,57 +19,93 @@
  
 \title{Infi1 Homework}
 \author{KanHar}
-\maketitle
+\maketitle 
  
 \begin{problem}{1}
-Prove: $\sqrt{3} \notin \mathbb{Q}$
+	Prove: $\sqrt{3} \notin \mathbb{Q}$
 \end{problem}
 
 \begin{proof}{1}
-We will prove: $\forall n \in \mathbb{N}: n \nmid 3 \implies n^2 \nmid 3$
+	We will prove: $\forall n \in \mathbb{N}: n \nmid 3 \implies n^2 \nmid 3$
 \begin{proof}{1.1} \label{p1_1}
-$$n \nmid 3 \implies n\bmod{3} \in \{1,2\}$$
-Option A: $$n \bmod{3} = 1 \newline$$
-$$n = (3m+1)$$
-$$n^2 = 9m^2 + 6m + 1$$
-$$9m^2\bmod3=0$$
-$$6m\bmod3=0$$
-$$n^2\bmod{3} = 0+0+1 = 1$$
-Option B: $$n \bmod{3} = 2 \newline$$
-$$n = (3m+2)$$
-$$n^2 = 9m^2 + 12m + 4$$
-$$9m^2\bmod3=0$$
-$$12m\bmod3=0$$
-$$4\bmod3=1$$
-$$n^2\bmod{3} = 0+0+1 = 1$$
+	$$n \nmid 3 \implies n\bmod{3} \in \{1,2\}$$
+	Option A: $$n \bmod{3} = 1 \newline$$
+	$$n = (3m+1)$$
+	$$n^2 = 9m^2 + 6m + 1$$
+	$$9m^2\bmod3=0$$
+	$$6m\bmod3=0$$
+	$$n^2\bmod{3} = 0+0+1 = 1$$
+	Option B: $$n \bmod{3} = 2 \newline$$
+	$$n = (3m+2)$$
+	$$n^2 = 9m^2 + 12m + 4$$
+	$$9m^2\bmod3=0$$
+	$$12m\bmod3=0$$
+	$$4\bmod3=1$$
+	$$n^2\bmod{3} = 0+0+1 = 1$$
 
-Therefore $n^2 \bmod{3} \ne 0 \implies  n^2 \nmid 3$.
+	Therefore $n^2 \bmod{3} \ne 0 \implies  n^2 \nmid 3$.
 \end{proof}
-Assume: $\sqrt{3} \in \mathbb{Q}$
-$$\exists{n,m}\in \mathbb{N}: \frac{n}{m} = \sqrt{3} \land \gcd(n,m)=1$$
-$$\frac{n^2}{m^2}=3$$
-$$n^2 = 3m^2$$
-By proof 1.1:
-$$n^2 \mid 3 \implies n \mid 3$$
-$$\exists k \in \mathbb{N}:n = 3k$$
-$$n^2 = 9k^2$$
-$$\frac{9k^2}{m^2}=3$$
-$$9k^2 = 3m^2$$
-$$m^2 = 3k^2$$
-$$m^2 \mid 3 \implies m \mid 3$$
-$$m \mid 3 \land n \mid 3 \implies \gcd(m,n) \ne 1$$
-We have reached a contradiction. Therefore our assumption is false and $\sqrt{3} \notin \mathbb{Q}$.
+	Assume: $\sqrt{3} \in \mathbb{Q}$
+	$$\exists{n,m}\in \mathbb{N}: \frac{n}{m} = \sqrt{3} \land \gcd(n,m)=1$$
+	$$\frac{n^2}{m^2}=3$$
+	$$n^2 = 3m^2$$
+	By proof 1.1:
+	$$n^2 \mid 3 \implies n \mid 3$$
+	$$\exists k \in \mathbb{N}:n = 3k$$
+	$$n^2 = 9k^2$$
+	$$\frac{9k^2}{m^2}=3$$
+	$$9k^2 = 3m^2$$
+	$$m^2 = 3k^2$$
+	$$m^2 \mid 3 \implies m \mid 3$$
+	$$m \mid 3 \land n \mid 3 \implies \gcd(m,n) \ne 1$$
+	We have reached a contradiction. Therefore our assumption is false and $\sqrt{3} \notin \mathbb{Q}$.
 \end{proof}
 
 \begin{problem}{2}
-Prove or falsify: $(x \ge 0 \in \mathbb{R}, \forall \epsilon > 0 \in \mathbb{R}: x<\epsilon) \implies x = 0$ \linebreak
+	Prove or falsify: $(x \ge 0 \in \mathbb{R}, \forall \epsilon > 0 \in \mathbb{R}: x<\epsilon) \implies x = 0$ \linebreak
 \end{problem}
 
 \begin{proof}{2}
-Assume $ x \ne 0 \implies x > 0$
-$$x \in R \implies \frac{x}{2} \in R$$
-$$x > 0 \implies x > \frac{x}{2}$$
-We have reached a contradiction, therefore, our assumption is wrong and $x=0$.
+	Assume $ x \ne 0 \implies x > 0$
+	$$x \in R \implies \frac{x}{2} \in R$$
+	$$x > 0 \implies x > \frac{x}{2}$$
+	We have reached a contradiction, therefore, our assumption is wrong and $x=0$.
+\end{proof}
+
+
+\begin{problem}{3}
+	Prove:
+	$A \subseteq R, \exists \epsilon > 0: \forall a \in A: a > \epsilon \implies \lnot (0 = \inf A)$
+\end{problem}
+
+\begin{proof}{3}
+	Assume $\inf A = 0$: \newline
+	By the definition, $\epsilon$ is a lower bound of A. Therefore, 0 cannot be the infimum of the group as the infimum is defined as the highest lower bound, and $\epsilon > 0$ is a lower bound. \newline
+	We have reached a contradiction, therefore the assumption is wrong and $\inf A \ne 0 \implies \lnot (0 = \inf A)$.
+\end{proof}
+
+\begin{problem}{4}
+	$B = \{(-1)^{n-1}\cdot(2+\frac{3}{n})) | n \in \mathbb{N}\}$. Find upper and lower bounds, max and min.
+\end{problem}
+
+\begin{proof}{4}
+	The function $\frac{1}{n}$ is monotonically decreasing, therefore $2+\frac{3}{n}$ is monotonically decreasing.
+	There value of the expression $(-1)^{n-1}$ is dependent on $n \bmod{2} \in \{0,1\}$: \newline
+	There are 2 possibilities - Option A - $$n \bmod{2} = 0$$
+	$$\exists k \in \mathbb{N}: n = 2k$$
+	$$(-1)^{n-1}\cdot(2+\frac{3}{n}) = (-1)^{2k-1}\cdot(2+\frac{3}{2k}) = (-1)^{2k}\cdot(-1)^{-1}\cdot(2+\frac{3}{2k})$$
+	$$=-(2+\frac{3}{2k})$$
+	This expression is monotonicaly increasing so it's infimum is at $k = 1$.
+	$$\inf{-(2+\frac{3}{2k})}=-(2+\frac{3}{2})=-\frac{7}{2} \in B$$
+	This expression is always negative. \newline
+	Option B - $$n \bmod{2} = 1$$
+	$$\exists k \in \mathbb{N}: n = 2k-1$$
+	$$(-1)^{n-1}\cdot(2+\frac{3}{n}) = (-1)^{2k-2}\cdot(2+\frac{3}{2k-1}) = (2+\frac{3}{2k-1})$$
+	This expression is monotonicaly decreasing so it's suprimum is at $k=1$.
+	$$\sup{(2+\frac{3}{2k-1})} = (2+\frac{3}{2-1}) = 5 \in B$$
+	This expression is always positive.
+	As the first option is always negative and the second is always positive, the suprimum of the first option and the infimum of the second option hold for the whole expression. Both the suprimum and the infimum are inside the group so they are maximum and minimum
+	Therefore, $$\max B = 5, \min B = -\frac{7}{2}$$
 \end{proof}
 
 \end{document}
